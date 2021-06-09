@@ -18,7 +18,9 @@ $$C(s)=\frac{u(t)}{e(t)}=K_p \left( 1+\frac{K_i}{s}+K_ds\right)$$
 
 Sehingga, kendali PID membutuhkan tiga parameter yaitu $K_p$, $K_i$, dan $K_d$.
 
-Pada pendekatan ini, digunakan metode optimasi *Genetic Algorithm* yang diimplementasi dari <a href="https://github.com/Samuel-Ayankoso/Real-Coded-Genetic-Algorithm-GA-">Samuel-Ayankoso/Real-Coded-Genetic-Algorithm-GA</a> dengan beberapa penyesuaian. Beberapa penyesuaian tersebut antara lain:
+*Genetic Algorithm* (GA) adalah sebuah metode optimasi fungsi yang mencari individu 'terbaik' pada suatu generasi. Pada implementasi ini, individu 'terbaik' didefinisikan berdasarkan nilai error terkecil antara respon *step* sistem yang diberikan dan yang diinginkan.
+
+Pada pendekatan ini, digunakan metode optimasi *Genetic Algorithm* yang diimplementasi *from scratch* dari <a href="https://github.com/Samuel-Ayankoso/Real-Coded-Genetic-Algorithm-GA-">Samuel-Ayankoso/Real-Coded-Genetic-Algorithm-GA</a> dengan beberapa penyesuaian. Beberapa penyesuaian tersebut antara lain:
 
 - *Fitness function* yang disusun didasarkan dari hasil selisih `stepinfo()` dengan nilai yang diinginkan (*desired value*).
 -  Sistem yang diuji adalah sistem diskrit yang diubah menggunakan `c2d()` dengan metode *ZOH*.
