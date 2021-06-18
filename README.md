@@ -10,13 +10,13 @@ Kendali PID (*Proportional*, *Integral*, *Derivative*) merupakan sistem kendali 
 
 Blok diagram di atas mengilustrasikan persamaan berikut:
 
-$$u(t)=K_p \left( e(t) + \frac{1}{T_i} \int_0^t e(\tau) d\tau + T_d \frac{de(t)}{dt} \right)$$
+<p align="center"><img src="./asset/pid-equ.png" height=40px></p>
 
-Dimana $u(t)$ adalah `Control signal`. Fungsi PID dapat direpresentasikan menjadi *transfer function*, yaitu:
+Dimana `u(t)` adalah `Control signal`. Fungsi PID dapat direpresentasikan menjadi *transfer function*, yaitu:
 
-$$C(s)=\frac{u(t)}{e(t)}=K_p \left( 1+\frac{K_i}{s}+K_ds\right)$$
+<p align="center"><img src="./asset/transfer-function.png" height=40px></p>
 
-Sehingga, kendali PID membutuhkan tiga parameter yaitu $K_p$, $K_i$, dan $K_d$.
+Sehingga, kendali PID membutuhkan tiga parameter yaitu `Kp`, `Ki`, dan `Kd`.
 
 *Genetic Algorithm* (GA) adalah sebuah metode optimasi fungsi yang mencari individu 'terbaik' pada suatu generasi. Pada implementasi ini, individu 'terbaik' didefinisikan berdasarkan nilai error terkecil antara respon *step* sistem yang diberikan dan yang diinginkan.
 
