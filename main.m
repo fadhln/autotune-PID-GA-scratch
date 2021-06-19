@@ -1,7 +1,7 @@
 clc; clear; close all;
 
 %% Define system
-plant_d, desired, Ts = defineSys();
+[plant_d, desired, Ts] = defineSys();
 
 %% Params of GA
 % Define Lower Bound (LB) and Upper Bound (UB)
